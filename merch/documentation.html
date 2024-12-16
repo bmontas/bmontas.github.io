@@ -1,0 +1,208 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Documentation Template</title>
+    <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
+    <meta name="author" content="Carlos Yllobre">
+
+    <link rel="stylesheet" href="style.css?">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!--div class="navbar clear nav-top">
+        <div class="row content">
+            <a href="#"><img class="logo" src="logo.svg"></a>
+            <a class="right" style="text-decoration: underline;" href="#"><i class="fas fa-book"></i>&nbsp; Documentation</a>
+            <a class="right" href="mailto:yourapp@email.com" target="_blank"><i class="fas fa-paper-plane"></i>&nbsp; yourapp@email.com</a>
+        </div>
+    </div-->
+
+    <div class="container clear">
+        <div class="row wrapper">
+
+            <div class="sidepanel">
+
+                <a class="title" href="#">Introduction</a>
+                <a class="section" href="#technology">Technology</a>
+                <a class="section" href="#">About this App</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#thebot">The Bot</a>
+                <a class="section" href="#avoiddetection">Avoiding Detection</a>
+                <a class="section" href="#configuration">Configuration</a>
+                <a class="section" href="#distributions">Statistical Distributions</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#basicfeatures">Back End</a>
+
+                <a class="section" href="#basicfeatures">Database</a>
+                <a class="section" href="#basicfeatures">API</a>
+                <a class="section" href="#feature3">Market tracker</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#basicfeatures">Front End</a>
+
+                <a class="section" href="#basicfeatures">Control Panel</a>
+                <a class="section" href="#basicfeatures">Dashboard</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#finalnote">Final note</a>
+            
+             <div class="space double"></div>
+
+            </div>
+
+            <div class="right-col">
+
+                <h1 >Introduction</h1>                
+                <p>
+                  Around 6 years ago I started working on a fun project that turned out a lot more successful than I had anticipated. I made a trading bot for the popular online video game Old School RuneScape. This game has a complex economy and a global exchange system similar in many ways to the real stock market. The in-game currency also has a real world value. It started out as a simple program but over the years I added a back-end, control panel and dashboard.
+                </p> 
+            
+                <h2>Technology</h2>
+                <p id="technology">This project is built using Python, MySQL, PHP, Javascript, HTML, CSS, R, PowerBI, Linux, Free Pascal and a bit of Java
+
+
+                <br>
+                <p id="thebot"></p> 
+                 
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+                <h1>The Bot</h1>
+                
+                <p>
+                   The bot itself is coded in a language called Free Pascal, which is a rather obscure language that no one really uses.
+                   However, there was a specific scripting engine that was using it and it had some libraries that I found useful, so I decided to go for it. The language itself could be considered to be somewhere between Java and C++ in terms of abstraction.
+                   <br><br>
+                   <!--br><br>
+                   <video width=100% controls><source src="deletenow.mp4" type="video/mp4"></video-->
+                    <img src="demo.png" style="width:100%;">
+                </p>
+
+                <p id="avoiddetection"></p>
+                             
+                <h2>Avoiding Detection</h2>
+
+                <p>
+                  The biggest challenge is not automating the various UIs, but it is to do so in a human-like way as to avoid detection. 
+                  When we humans use interfaces there is a lot of randomness in our actions. Sometimes it might take us a few seconds to complete a task and sometimes much longer. We might pause midway to change our playlist or respond to a text. Whatever it may be, it creates natural variation. We also don't click static coordinates on the screen, etc. I wanted the bot to reflect these facts.
+                  <br><br>
+                  Another challenge was to make sure that the bot wouldn't get caught in an infinite feedback loop or do something suspicious. I had to come up with
+                  a fail safe system that would cover all of the edge cases and unpredictable events. If the bot is unable to get back on track it will terminate to avoid putting itself at risk.
+                </p>  
+                <p id="configuration"></p>
+                <h2>Configuration</h2>
+                <p>
+                  I came up with a configuration system to make every instance of the bot unique in a way that aims to bypass advanced comparative analysis. Almost every aspect of the behaviour is customizable. The mouse movement, the reaction time, the typing speed, etc. Every bot is behaving as if they are a different person.
+                  <br><br>
+                  For example, here is the configuration that controls the typing behaviour:
+                  <br><br>
+                  <img src="const.png" style="">
+                </p>
+                
+                <p id="distributions"></p>
+                <h2>Statistical Distributions</h2>
+                <p>
+                  I made sure to add the possibility for random delays between actions. However, using a simple random range would make the distributions look unnaturally uniform, so I used normal distributions (bell curve) by default. 
+                  <br><br>
+                  <span>
+                    <img src="uniform.png" style="margin:0">
+                    <img src="normal.png" style="margin-left:-2x">
+                  </span>
+                </p>
+                <p>
+                  I often found myself making instruments to record my own data and picking a mean and Std Dev
+                  based on what I found, sometimes using the Python package matplotlib to make simple vizualisations.
+                  <br><br>
+                  <img src="viz2.png" style="width:100%;">
+                </p>
+                <p>
+                  Every click target is defined as a box. The bot rolls a random point inside the box following normal distribution which creates a bias toward the center. The density translates to click accuracy, which can also be adjusted in the configuration.
+                  <br><br>
+                  <img src="gauss.png" style="">
+                </p>
+                
+
+                    
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+            
+            
+                <h1>Back End</h1>
+
+                <h2>Database</h2>
+                
+                <p id="basicfeatures">
+                  This project is using a MySQL database. Every trade, including failed attempts, are stored in the <code>flips</code> table and include
+                  the unix timestamp, the profit and the ID of the item and bot who performed the trade.<br><br>
+                  Here is a EER diagram I made:
+                </p>
+                <img src="merch_sql.png" style="width:100%">
+                
+                <h2>API</h2>
+                <p>
+                  This project is using a simple PHP RESTful API to allows the bots to access market insights established by the tracker along with posting closed trades.<br><br>
+                  For example, to get the low or high margin value of an item currently being tracked, the request would go as follows:
+                </p>
+                <div style="font-size: 1.3em;background-color:#121821;padding:5px;margin-left:40px;margin-bottom:30px;display:inline-block;">
+                  <code>curl https://borismoki.com/merch/api?id=22124&high</code>
+                </div>
+                <br>
+                <p>
+                  To post a closed trade the request would go as follows:
+                </p> 
+                <div style="font-size: 1.3em;background-color:#121821;padding:5px;margin-left:40px;margin-bottom:30px;display:inline-block;">
+                  <code>
+                    curl -X POST https://reqbin.com/echo/post/json
+                    -H 'Content-Type: application/json'
+                    -d '{"login":"my_login","password":"my_password"}'
+                  </code>
+                </div>                   
+                
+                <h2>Market Tracker</h2>
+                
+                <p>
+                  The tracker is a Python script that makes use of a public third party API containing live market data. It applies a series of
+                  custom algorithms to analyze market movements and find patterns.<br><br>
+                  As of writing, there are 94 items that are flagged as <em>flippable</em> in the database:
+                </p>
+                <img src="flippable.png" style="width:100%">
+                <p>The reason why I need a "flippable" column is because every item that is currently active on any bot needs to continue being tracked regardless of whether it is still profitable or not.</p>
+                <!--div class="divider" style="width:24%; margin:30px 0;"></div--> 
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+              <p id="finalnote"></p>               
+                
+              <h1 >Final Note</h1>
+              <p>
+                This project is what initially got me into programming many years ago and holds a special place in my heart. Hours of headache spent fixing often avoidable mistakes, but I don't regret any of it. I could not have hoped for a better learning experience. 
+                <br><br>
+                I don't plan on investing much more time on this project for various reasons. One of these reasons being that the economy in these types of games tends to develop some of the same problems as real world economies, particularily inflation.
+               </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
