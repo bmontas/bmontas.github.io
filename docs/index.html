@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Documentation Template</title>
+    <title>Trading bot</title>
     <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
     <meta name="author" content="Boris Montas">
 
@@ -34,9 +34,8 @@
 
             <div class="sidepanel">
 
-                <a class="title" href="#">Introduction</a>
+                <a class="title" href="#introduction">Introduction</a>
                 <a class="section" href="#technology">Technology</a>
-                <a class="section" href="#">About this App</a>
 
                 <div class="divider left"></div>
 
@@ -47,18 +46,18 @@
 
                 <div class="divider left"></div>
 
-                <a class="title" href="#basicfeatures">Back End</a>
+                <a class="title" href="#backend">Back End</a>
 
-                <a class="section" href="#basicfeatures">Database</a>
-                <a class="section" href="#basicfeatures">API</a>
-                <a class="section" href="#feature3">Market tracker</a>
+                <a class="section" href="#database">Database</a>
+                <a class="section" href="#api">API</a>
+                <a class="section" href="#markettracker">Market tracker</a>
 
                 <div class="divider left"></div>
 
-                <a class="title" href="#basicfeatures">Front End</a>
+                <a class="title" href="#frontend">Front End</a>
 
-                <a class="section" href="#basicfeatures">Control Panel</a>
-                <a class="section" href="#basicfeatures">Dashboard</a>
+                <a class="section" href="#controlpanel">Control Panel</a>
+                <a class="section" href="#dashboard" style="color:#19e619">PowerBI Dashboard</a>
 
                 <div class="divider left"></div>
 
@@ -70,12 +69,12 @@
 
             <div class="right-col">
 
-                <h1 >Introduction</h1>                
+                <h1 id="introduction">Introduction</h1>                
                 <p>
-                  Around 6 years ago I started working on a fun project that turned out a lot more successful than I had anticipated. I made a trading bot for the popular online video game Old School RuneScape. This game has a complex economy and a global exchange system similar in many ways to the real stock market. The in-game currency also has a real world value. It started out as a simple program but over the years I added a back-end, control panel and dashboard.
+                  Around 6 years ago I started working on a fun project that turned out to be successful. I made a trading bot for the popular online video game Old School RuneScape. This game has a complex economy and a global exchange system similar in many ways to the real stock market. The in-game currency also has a real world value. It started out as a simple program but over the years I added a back-end, a control panel and a data analysis dashboard.
                 </p> 
             
-                <h2>Technology</h2>
+                <h2 id="technology">Technology</h2>
                 <p id="technology">This project is built using Python, MySQL, PHP, Javascript, HTML, CSS, R, PowerBI, Linux, Free Pascal and a bit of Java
 
 
@@ -101,7 +100,7 @@
 
                 <p>
                   The biggest challenge is not automating the various UIs, but it is to do so in a human-like way as to avoid detection. 
-                  When we humans use interfaces there is a lot of randomness in our actions. Sometimes it might take us a few seconds to complete a task and sometimes much longer. We might pause midway to change our playlist or respond to a text. Whatever it may be, it creates natural variation. We also don't click static coordinates on the screen, etc. I wanted the bot to reflect these facts.
+                  When we use interfaces there is a lot of randomness in our actions. We might pause midway to change our playlist or respond to a text. Whatever it may be, it creates natural variation. We also don't click static coordinates on the screen, etc. I wanted the bot to reflect these facts.
                   <br><br>
                   Another challenge was to make sure that the bot wouldn't get caught in an infinite feedback loop or do something suspicious. I had to come up with
                   a fail safe system that would cover all of the edge cases and unpredictable events. If the bot is unable to get back on track it will terminate to avoid putting itself at risk.
@@ -143,24 +142,24 @@
             <div class="divider" style="width:24%; margin:30px 0;"></div>
             
             
-                <h1>Back End</h1>
+                <h1 id="backend">Back End</h1>
 
-                <h2>Database</h2>
+                <h2 id="database">Database</h2>
                 
                 <p id="basicfeatures">
                   This project is using a MySQL database. Every trade, including failed attempts, are stored in the <code>flips</code> table and include
                   the unix timestamp, the profit and the ID of the item and bot who performed the trade.<br><br>
-                  Here is a EER diagram I made:
+                  Here is a relationship diagram I made:
                 </p>
                 <img src="merch_sql.png" style="width:100%">
                 
-                <h2>API</h2>
+                <h2 id="api">API</h2>
                 <p>
-                  This project is using a simple PHP RESTful API to allows the bots to access market insights established by the tracker along with posting closed trades.<br><br>
+                  This project is using a simple PHP RESTful API to allow the bots to access market insights established by the tracker along with posting closed trades.<br><br>
                   For example, to get the low or high margin value of an item currently being tracked, the request would go as follows:
                 </p>
                 <div style="font-size: 1.3em;background-color:#121821;padding:5px;margin-left:40px;margin-bottom:30px;display:inline-block;">
-                  <code>curl https://borismoki.com/merch/api?id=22124&high</code>
+                  <code>curl https://borismoki.com/merch/api/item?id=22124&high</code>
                 </div>
                 <br>
                 <p>
@@ -168,13 +167,13 @@
                 </p> 
                 <div style="font-size: 1.3em;background-color:#121821;padding:5px;margin-left:40px;margin-bottom:30px;display:inline-block;">
                   <code>
-                    curl -X POST https://reqbin.com/echo/post/json
+                    curl -X POST https://borismoki.com/api/trade
                     -H 'Content-Type: application/json'
-                    -d '{"login":"my_login","password":"my_password"}'
+                    -d '{"profit":9999,"amount":1,"time_active":84,"item_id":22124,"acc_id":9}'
                   </code>
                 </div>                   
                 
-                <h2>Market Tracker</h2>
+                <h2 id="markettracker">Market Tracker</h2>
                 
                 <p>
                   The tracker is a Python script that makes use of a public third party API containing live market data. It applies a series of
@@ -182,18 +181,38 @@
                   As of writing, there are 94 items that are flagged as <em>flippable</em> in the database:
                 </p>
                 <img src="flippable.png" style="width:100%">
-                <p>The reason why I need a "flippable" column is because every item that is currently active on any bot needs to continue being tracked regardless of whether it is still profitable or not.</p>
+                <!--p>The reason why I need a "flippable" column is because every item that is currently active on any bot needs to continue being tracked regardless of whether it is still profitable or not.</p-->
                 <!--div class="divider" style="width:24%; margin:30px 0;"></div--> 
 
             <div class="divider" style="width:24%; margin:30px 0;"></div>
 
+              <h1 id="frontend">Front End</h1>
+
+              <h2 id="controlpanel">Control Panel</h2>
+
+              <p>
+                Around 4 years ago I decided to make a control panel that would allow me to monitor every server and send commands to them. Before that I had to SSH into every server every time I wanted to check on them. So this saved me a significant amount of time. I had limited front end experience at the time so I kept it simple. 
+              </p>
+              <img src="controlpanel1.png" style="width:100%"><br><br>
+              <p>
+                Each tile represent a server. You can click on it to expand and see the latest screenshot and send basic commands e.g. start, stop, restart.
+              </p>
+              <img src="controlpanel2.png" style="width:100%">
+              <h2 id="dashboard">PowerBI Dashboard</h2>
+
+              <p>
+                I eventually started to become more serious about the data analysis side of this operation. I started learning tools like PowerBI and Tableau. I was quickly able to gain valuable insights from my visualizations.
+              </p>
+              <img src="dashboard.png" style="width:100%">
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
               <p id="finalnote"></p>               
                 
-              <h1 >Final Note</h1>
+              <h1 id="finalnote">Final Note</h1>
               <p>
                 This project is what initially got me into programming many years ago and holds a special place in my heart. Hours of headache spent fixing often avoidable mistakes, but I don't regret any of it. I could not have hoped for a better learning experience. 
                 <br><br>
-                I don't plan on investing much more time on this project for various reasons. One of these reasons being that the economy in these types of games tends to develop some of the same problems as real world economies, particularily inflation.
+                I don't plan on investing much more time on this project for various reasons. One of these reasons being that the economy in these types of games tends to develop some of the same problems as real world economies, e.g. inflation.
                </p>
 
             </div>
