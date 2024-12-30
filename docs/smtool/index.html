@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Social Media Tool</title>
+    <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
+    <meta name="author" content="Boris Montas">
+
+    <link rel="stylesheet" href="style.css?">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <!--div class="navbar clear nav-top">
+        <div class="row content">
+            <a href="#"><img class="logo" src="logo.svg"></a>
+            <a class="right" style="text-decoration: underline;" href="#"><i class="fas fa-book"></i>&nbsp; Documentation</a>
+            <a class="right" href="mailto:yourapp@email.com" target="_blank"><i class="fas fa-paper-plane"></i>&nbsp; yourapp@email.com</a>
+        </div>
+    </div-->
+    <div style="display:flex;justify-content:center;">
+    </div>
+    <div class="container clear">
+        <div class="row wrapper">
+            <div class="sidepanel">
+
+                <a class="title" href="#introduction">Introduction</a>
+                <a class="section" href="#technology">Technology</a>
+                <a class="section" href="#challenges">Challenges</a>
+                <div class="divider left"></div>
+
+                <a class="title" href="#frontend">Front End</a>
+                <a class="section" href="#pageconfig">Page Configuration</a>
+                <a class="section" href="#clientconfig">Client Configuration</a>
+                <a class="section" href="#confirmation">Confirmation</a>
+                <a class="section" href="#upload">Upload Scheduler</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#backend">Back End</a>
+
+                <a class="section" href="#database">Database</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#controller">Client Controller</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#dashboard" style="color:#19e619">Data Analysis</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#finalnote">Final note</a>
+            
+             <div class="space double"></div>
+
+            </div>
+            <div class="right-col">
+                <header>
+                  <b>Social Media Account Manager</b>
+                  <p style="font-size:0.37em;">Boris Montas | December 12, 2024</p>
+                </header>
+                <h1 id="introduction">Introduction</h1>                
+                <p>
+                  Around 2 years ago I started to work on a social media related project. I created a web app that allows you to manage a social media account farm. It aims to generate organic growth with minimal human input.
+                  <br><br>
+                  Social media companies typically do not like when you run a lot of accounts from a single device and they tend to flag them as spam. The challenge lies in avoiding that. On one hand I want to run an account farm, on the other hand I want to stay on these companies' good side.
+                  This app is designed not to cause any spam. The aim of these kinds of tools is usually marketing. People seek to promote e-commerce stores, services, influencers, etc. A lot of research went into developing my methods.
+                  <br><br>
+                  The goal of this article will not be to explain how to use the app, but to show an overview of what it can do. I am still working on more detailed documentation. 
+                  <br><br>
+                  <img src="panel.png" style="width:125%;">
+                </p> 
+            
+                <h2 id="technology">Technology</h2>
+                <p id="technology">This project is built using Python, Flask, Selenium, MySQL, Javascript, HTML, CSS, PowerBI, Linux, Azure AI services
+
+
+                <br>
+                <p id="thebot"></p> 
+
+              <h2 id="challenges">Challenges</h2>                
+              <p>
+                While I was developing this tool I ran into many limiting factors that made it difficult to scale to a larger number of accounts. Here are the main bottlenecks I've
+                had to struggle with:
+                <ul>
+                  <li><b>The IP address problem.</b> If you tried to run 50 accounts from your residential IP, Instagram would definitely see it as suspicious. They would limit your reach if not outright ban/action block you. A lot of people resort to using proxies, but proxies can easily make you stand out even more. People usually look for residential or mobile proxies, which can be very expensive. I took a slightly different approach. </li>
+                  <br>
+                  <li><b>Cost.</b> As I mentionned in the previous point, the cost of running such an operation can be very high. It's not uncommon to hear about people spending over 1000$ a month in proxies, storage and specialized software to run an account farm. My method is a lot less expensive than that.</li>
+                  <br>
+                  <li><b>Browser fingerprinting.</b> IP address is not the only thing these companies look for. There's a lot that go into fingerprinting. These companies have a very big budget
+                  and usually do a good job at tracking you. You might think that deleting the cookies and browser cache would be enough but no, they know who you are.</li>
+                  <br>
+                  <li><b>Time.</b> The amount of time you need to spend per post can be a major bottleneck. If for every single post I had to manually search for content to download, write a good caption, and then upload it manually it would be difficult to run more than a few accounts. I made sure to automate the majority of the work. </li>
+                </ul> 
+              </p>
+
+              <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+                <h1 id="frontend">Front End</h1>
+                
+                <p>
+                   At the center of this tool there is the control panel. Front end developement is not my biggest strength but I am satisfied with what I made.
+                <br><br>
+                  There are still many features I would like to add but I have to be careful about how I use the space. There's been time where I developed entire features only to end up not using them. The goal is to create an optimized workflow. The interface is separated into 3 tabs: the page configuration tab, the confirmation tab and the upload tab.
+                   <br><br>
+                   <!--br><br>
+                   <video width=100% controls><source src="deletenow.mp4" type="video/mp4"></video-->
+                   <img src="tabs.png" style="width:125%;">
+                </p>
+                             
+                <h2 id="pageconfig">Page Configuration</h2>
+
+                <p>
+                  The configuration is the most important part. There is a hashtag system, page settings, scraping and, most importantly, the identity of the page. The identity determines what kind of content we are going to post. It's composed of a list of other pages who post the same kind of content as what we are going for. Algorithms on the back-end will be using it to decide what to post. Ideally the identity should contain at least 5 pages. 
+                  <br><br>
+                  <img src="identity.png" style="width:125%;">
+                  <br><br>
+                  For now only Instagram is supported but I made sure to design the app as to allow for more platforms to be added easily. I'm planning on adding Tiktok and X (twitter).
+                </p>  
+                <h2 id="clientconfig">Client Configuration</h2>
+
+                <p>
+                  In the context of this app, clients are groups of pages with a common theme. For now I'm planning to around 10 pages per clients. Pages on a client will be using the same storage location since they will be a lot of overlap in what they are posting. There is also the possiblity for clients to share files between them if a domain is setup.
+                  <br><br>
+                  <img src="client.png" style="width:125%;">
+                  <br><br>
+                  Although cloud storage is what I had in mind at first, I quickly realized how expensive it could get so I added the option to use local storage since SSDs are a lot more cost efficient than cloud.
+                </p>
+                
+                <h2 id="confirmation">Confirmation</h2>
+                <p>
+                  The second tab allows me to manually review each post before scheduling them. You can schedule a download task and posts will start populating the feed. You can then click on the posts to enlarge them and write a custom caption. I am currently developing a feature to partially automate this process.
+                  <br><br>
+                  <img src="enlarge.png" style="width:125%;">
+                  <br><br>
+                  <!--p>The standard routine would be: Clear -> Phrase -> Credit -> Get hashtags. The credit button is meant to give credit to the original author of the content if possible. Phrase will insert a string of text or emojis at random as defined in the configuration.</p--> I've been considering doing something like a ChatGPT implementation here but I'm still unsure of how I want to go about it.
+                  <br><br>
+                  There is an option to enable the hashtag system which can be very useful for certain types of pages. It makes use of the Azure's image tagging AI service to find keywords describing the image (they are highlighted in green).
+                  <br><br>
+                  <img src="rain.png" style="width:100%;">
+                  <br><br>
+                  Those keywords are matched with the ones defined in the hashtag configuration, allowing for various categories of hashtag to be tapped into when generating the caption. For example, if the image contains a mountain, then mountain related hashtag can appear in addition to the default hashtag categories.
+                  <br><br>
+                  <img src="hashtag.png" style="width:125%;">
+                  <br><br>
+                  There are also some keyboard shortcuts for confirming and discarding faster; CTRL+click will select confirm and ALT+click will select discard. Once you are satisfied with the selection you can click submit and the posts will be sent to the next step.
+                  <br><br>
+                  <img src="confirm.png" style="width:125%;">
+                  <br><br>
+                </p>
+                <h2 id="upload">Upload Scheduler</h2>
+                <p>
+                  The final tab allows you to set the upload schedule. The posts will then be queued following this schedule. If there's already some posts scheduled then they will be appended at the end of the queue. There is no limit to how far in the future you can schedule. When the time comes the client-side controller will pick up on the task and upload the post. The idea is to schedule many months in advance and then almost forget about the page for a while. 
+                  <br><br>
+                  <img src="schedule.png" style="width:125%;">
+                </p>
+                
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+             
+              <h1 id="backend">Back End</h1>
+              <p>
+                I build the back end using the Python framework Flask. I chose Flask because I only intended this to be a tool for my own personal usage, I wasn't too worried about stability or efficiency. I also expected that the app would be small so Flask felt appropriate to my use case. The API endpoints were also made using Flask.
+              </p>
+                    
+              <h2 id="database">Database</h2>
+              <p>
+                I used MySQL for my database. I like using MySQL for these kinds of projects since it's generally easy to setup. I knew I would mostly be doing simple reads and writes and MySQL is pretty good for that.
+                <br><br>
+                Here is a relationship diagram I made:
+                <br><br>
+                <img src="database.png" style="width:125%;">
+              </p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>  
+            
+              <h1 id="controller">Client Controller</h1>
+
+              <p>
+                The client is a Python program that runs parameterized tasks that have been scheduled using the control panel. The 3 main ones are: scraping task, download task and upload task. Both the scraping task and upload task are using Selenium to automate UIs. The scripts are contained in a python package which I host on github. I run the tasks in a separate thread to allow the controller to run pip upgrade before every task to update the package. This way nothing needs to be restarted when I make changes to the scripts.
+                <br><br>
+                This is also where a lot of the solutions to the bottlenecks are implemented. The IP address solution, the fingerprinting. I won't be sharing the specifics of those solutions in this article but I would be willing to do so in private.
+              </p>
+                
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+            
+              <h1 id="dashboard">Data Analysis</h1>
+
+              <p>
+                Instagram has an API to access analytics data so I decided to use it to make a PowerBI dashboard. I don't have any popular pages yet so I used some sample data for the sake of example. This dashboard will be very valuable in the context of trial and error. It will allow me to see what niches of content work best and what kinds of post I should be focusing on.
+                <br><br>
+                <img src="dashboard.png" style="width:110%">
+                <br><br>
+                There is a drilldown for the "Impression and Engagement" visual.
+                The order of the drilldown is:<br><br><code>&emsp;&emsp;&emsp;Client names -> Account names -> Individual posts.</code>
+                <br><br>
+                You can see the impressions, engagement rate and the different types of engagement (likes, replies, profile visit) at each level. 
+                <br><br>
+                In the bottom right there's a small table containing links to the posts, in case I want to investigate further.
+                <br><br>
+                <span>
+                  <img src="drill.png" style="margin:0">
+                  <img src="links.png" style="margin-left:-2x">
+                </span>
+              </p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+              <p id="finalnote"></p>               
+                
+              <h1 id="finalnote">Final Note</h1>
+              <p>
+                This project turned into something much bigger than I had anticipated, but I am satisfied with how it turned out. A few times I ran into roadblocks that seemed insurmountable, but each time I was able to find ways around the problem, often taking the project in a slightly different direction. My problem solving abilities and creativity were definitely put to the test.
+                <br><br>
+                I've been debating whether or not I should invest more time into this project and I have decided I would keep it as a hobby project going forward. I've never been a social media person and I think the building process was more enjoyable than using the tool would be for me.
+              </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
