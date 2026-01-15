@@ -72,13 +72,10 @@
                 </header>
                 <h1>Introduction</h1>                
                 <p>
-                  Around 3 years ago I started to work on a social media related project. I created a web app that allows you to manage a large number of social media accounts. It aims to generate organic growth with minimal human input.
+                  A while ago I started to work on a social media related project. I created a web app that allows you to manage a large number of social media accounts. It aims to generate organic growth with minimal human input.
                   <br><br>
                   Social media companies typically do not like when you run a lot of accounts from a single device and they tend to flag them as spam. The challenge lies in avoiding that. On one hand I want to run an account farm, on the other hand I want to stay on these companies' good side.
-                  This app is designed not to cause any spam. The aim of these kinds of tools is usually marketing. People seek to promote e-commerce stores, services, music, etc. A lot of research went into developing my methods.
-                  <br><br>
-                  The goal of this article will not be to explain how to use the app, but to show an overview of what it can do.
-                  <br><br>
+                  This app is designed not to cause any spam. The aim of these kinds of tools is usually marketing. People seek to promote e-commerce stores, services, music, etc.
                   <img src="panel.png" style="width:125%;">
                 </p> 
             
@@ -98,8 +95,7 @@
                   <br>
                   <li><b>Cost.</b> As I mentionned in the previous point, the cost of running such an operation can be very high. It's not uncommon to hear about people spending over 1000$ a month in proxies, storage and specialized software to run an account farm. My method is a lot less expensive than that.</li>
                   <br>
-                  <li><b>Browser fingerprinting.</b> IP address is not the only thing these companies look for. There's a lot that go into fingerprinting. These companies have a very big budget
-                  and usually do a good job at tracking you. You might think that deleting the cookies and browser cache would be enough but no, they know who you are.</li>
+                  <li><b>Browser fingerprinting.</b> IP address is not the only thing these companies look for. There's a lot that go into fingerprinting and these companies usually do a very good job at tracking you. Deleting cookies and clearing the cache isn't enough, they know who you are.</li>
                   <br>
                   <li><b>Time.</b> The amount of time you need to spend for each post can be a major bottleneck. If for every single post I had to manually search for content to download, write a good caption, and then upload it manually it would be difficult to run more than a few accounts. I made sure to automate the majority of the work. </li>
                 </ul> 
@@ -189,7 +185,7 @@
               <p>
                 The client is a Python program that runs parameterized tasks that have been scheduled using the control panel. The 3 main ones are: scraping task, download task and upload task. Both the scraping task and upload task are using Selenium to automate UIs. The scripts are contained in a python package which I host on github. I run the tasks in a separate thread to allow the controller to run pip upgrade before every task to update the package. This way nothing needs to be restarted when I make changes to the scripts.
                 <br><br>
-                This is also where a lot of the solutions to the bottlenecks are implemented. The IP address solution, the fingerprinting. I won't be sharing the specifics of those solutions in this article but I would be willing to do so in private.
+                This is also where a lot of the solutions to the bottlenecks are implemented. The IP address solution, the fingerprinting.
               </p>
                 
             <div class="divider" style="width:24%; margin:30px 0;"></div>
@@ -219,9 +215,9 @@
                 
               <h1 id="finalnote">Final Note</h1>
               <p>
-                This project turned into something much bigger than I had initially planned, but I am satisfied with how it turned out. A few times I ran into roadblocks that seemed insurmountable, but each time I was able to find ways around the problem, often taking the project in a slightly different direction. My problem solving abilities and creativity were definitely put to the test.
+                This project is unfinished but I am satisfied with what I made so far. Many times I ran into roadblocks that seemed insurmountable, but each time I was able to find ways around the problem. My problem solving abilities and creativity were definitely put to the test.
                 <br><br>
-                I've been debating whether or not I should invest more time into this project and I have decided I would keep it as a hobby project going forward. I've never been a social media person and I think the building process was more enjoyable than using the tool would be for me.
+                However I don't think I will be investing as much time on this project going forward. I've never been a social media person and I think the building process was more enjoyable than using the tool would be for me.
               </p>
 
             </div>
